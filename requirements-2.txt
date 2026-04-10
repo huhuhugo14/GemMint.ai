@@ -1,7 +1,0 @@
-streamlit
-opencv-python-headless
-numpy
-pillow
-requests
-scikit-image
-
