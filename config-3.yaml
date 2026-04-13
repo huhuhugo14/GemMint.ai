@@ -1,0 +1,32 @@
+# PSA 10 Profit Scanner v4.0 — Configuration
+# ─────────────────────────────────────────────────────────────────────
+# Get your free eBay Developer keys at: https://developer.ebay.com
+# My Account → Application Access Keys → Create Keyset → PRODUCTION
+# (Use Production, not Sandbox — Sandbox has no real listings)
+
+ebay:
+  app_id:  "YOUR-EBAY-APP-ID-HERE"
+  cert_id: "YOUR-EBAY-CERT-ID-HERE"
+  dev_id:  "YOUR-EBAY-DEV-ID-HERE"
+
+# ── Optional: override CV thresholds ─────────────────────────────────
+# These are sensible defaults — only change if you know what you're doing
+
+# Minimum image dimension after upscaling (px).
+# Lowered to 800 in v4 to accept more eBay thumbnail-quality photos.
+min_image_px: 800
+
+# Bilinear upscale target (px for shortest side).
+# Images smaller than this are upscaled before grading.
+upscale_target_px: 1200
+
+# Laplacian sharpening blend strength.
+# Higher = more aggressive sharpening. 1.2 is a good balance.
+laplacian_strength: 1.2
+
+# White-pixel brightness threshold for corner whitening detection.
+white_level: 210
+
+# ── Financial defaults ────────────────────────────────────────────────
+grading_fee: 25.00
+shipping_estimate: 6.00
